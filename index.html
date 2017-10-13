@@ -52,11 +52,15 @@
 	var popupContent = "";
 
 	if (feature.properties && feature.properties.scientif_1) {
-	  popupContent += "<b>Especie:</b>" + feature.properties.scientif_1;
+	  popupContent += "<b>Especie:</b> " + feature.properties.scientif_1;
 	}
 
-	if (feature.properties && feature.properties.verbatimLo) {
-	  popupContent += feature.properties.verbatimLo;
+	if (feature.properties && feature.properties.decimalLat) {
+	  popupContent += "<b>Latitud:</b> "feature.properties.decimalLat;
+	}
+	
+        if (feature.properties && feature.properties.decimalLon) {
+	  popupContent += "<b>Longitud:</b> "feature.properties.decimalLon;
 	}
 	      
 	layer.bindPopup(popupContent);
